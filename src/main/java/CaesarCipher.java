@@ -19,4 +19,27 @@ public class CaesarCipher {
   public int getUserKey(){
     return userKey;
   }
-}
+
+  public void setEncrypted(){
+    for(int i=0; i<userPlainInput.length;i++){
+      for(int y=0; y<alphabet.length;y++){
+        if(userPlainInput[i] == ' '){
+          userEncrypted[i] = ' ';
+        }
+        else if(userPlainInput[i] == alphabet[y]){
+          if(y+userKey >= alphabet.length){
+            y = (y-25+0-1);
+            userEncrypted[i] = alphabet[y+userKey];
+            break;
+          }
+          else{
+            userEncrypted[i] = alphabet[y+userKey];
+          }
+        }
+      }// end inner loop
+    }//end outer loop
+  }//end function
+
+
+
+} // end class
