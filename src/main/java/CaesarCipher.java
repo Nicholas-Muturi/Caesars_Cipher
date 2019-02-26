@@ -20,6 +20,8 @@ public class CaesarCipher {
     return userKey;
   }
 
+
+
   public void setEncrypted(){
     for(int i=0; i<userPlainInput.length;i++){
       for(int y=0; y<alphabet.length;y++){
@@ -40,6 +42,8 @@ public class CaesarCipher {
     }//end outer loop
   }//end function
 
-
+  public String getEncrypted(){
+    return String.valueOf(userEncrypted);
+  }
 
 } // end class
