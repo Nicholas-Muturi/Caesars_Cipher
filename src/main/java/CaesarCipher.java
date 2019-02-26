@@ -10,17 +10,7 @@ public class CaesarCipher {
       userKey = userNumber;
       userEncrypted = new char[userPlainInput.length];
       userDecrypted = new char[userPlainInput.length];
-    }
-
-  public char[] getUserPlain(){
-    return userPlainInput;
   }
-
-  public int getUserKey(){
-    return userKey;
-  }
-
-
 
   public void setEncrypted(){
     for(int i=0; i<userPlainInput.length;i++){
@@ -42,8 +32,23 @@ public class CaesarCipher {
     }//end outer loop
   }//end function
 
+  public char[] getUserPlain(){
+    return userPlainInput;
+  }
+
+  public int getUserKey(){
+    return userKey;
+  }
+
   public String getEncrypted(){
     return String.valueOf(userEncrypted);
+  }
+
+  public void printPlainInput(){
+    System.out.println(String.valueOf(userPlainInput));
+  }
+  public void printEncrypted(){
+    System.out.println(String.valueOf(userEncrypted));
   }
 
 } // end class
