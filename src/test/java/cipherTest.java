@@ -16,5 +16,11 @@ public class cipherTest {
     assertEquals("jk", cipher.getEncrypted());
   }
 
+    @Test
+    public void runCipher_getDecrypted_DecryptedData(){
+      CaesarCipher cipher = new CaesarCipher("hi".toCharArray(), 2);
+      cipher.setEncrypted();
+      cipher.setDecrypted();
+      assertEquals("hi", cipher.getDecrypted());
   }
 }
