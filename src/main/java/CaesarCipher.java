@@ -74,5 +74,8 @@ public class CaesarCipher {
   public void printEncrypted(){
     System.out.println(String.valueOf(userEncrypted));
   }
+  public void printDecrypted(){
+    System.out.println(String.valueOf(userDecrypted));
+  }
 
 } // end class

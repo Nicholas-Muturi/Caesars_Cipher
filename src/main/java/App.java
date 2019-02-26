@@ -12,8 +12,10 @@ public class App{
     char[] userEncrypted = new char[userSentence.length];
     CaesarCipher cipher = new CaesarCipher(userSentence,userShift);
     cipher.setEncrypted();
+    cipher.setDecrypted();
     cipher.printPlainInput();
     cipher.printEncrypted();
+    cipher.printDecrypted();
 
   }
 }
