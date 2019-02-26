@@ -15,4 +15,6 @@ public class cipherTest {
     cipher.setEncrypted();
     assertEquals("jk", cipher.getEncrypted());
   }
+
+  }
 }

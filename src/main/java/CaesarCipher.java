@@ -32,6 +32,26 @@ public class CaesarCipher {
     }//end outer loop
   }//end function
 
+  public void setDecrypted(){
+    for(int i=0; i<userEncrypted.length; i++){
+      for(int y=0; y<alphabet.length; y++){
+        if(userEncrypted[i] == ' '){
+          userDecrypted[i] = ' ';
+        }
+        else if(userEncrypted[i] == alphabet[y]){
+          if(y-userKey < 0){
+            y = (y+25-0+1);
+            userDecrypted[i] = alphabet[y-userKey];
+            break;
+          }
+          else{
+            userDecrypted[i] = alphabet[y-userKey];
+          }
+        }
+      }// end inner loop
+    }//end outer loop
+  }//end function
+
   public char[] getUserPlain(){
     return userPlainInput;
   }
@@ -42,6 +62,10 @@ public class CaesarCipher {
 
   public String getEncrypted(){
     return String.valueOf(userEncrypted);
+  }
+
+  public String getDecrypted(){
+    return String.valueOf(userDecrypted);
   }
 
   public void printPlainInput(){
