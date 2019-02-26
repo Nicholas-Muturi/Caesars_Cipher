@@ -68,14 +68,10 @@ public class CaesarCipher {
     return String.valueOf(userDecrypted);
   }
 
-  public void printPlainInput(){
+  public void printResults(){
     System.out.println(String.valueOf(userPlainInput));
-  }
-  public void printEncrypted(){
-    System.out.println(String.valueOf(userEncrypted));
-  }
-  public void printDecrypted(){
-    System.out.println(String.valueOf(userDecrypted));
+    System.out.println(getEncrypted());
+    System.out.println(getDecrypted());
   }
 
 } // end class
